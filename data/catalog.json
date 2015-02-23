@@ -1,0 +1,182 @@
+[
+	{
+		"id"		:0,
+		"title"		:"Math",
+		"series"	: 	[
+						{
+							"id"		:12,
+							"title"		:"Other Stuff",
+							"isRibbon"	:"false",
+							"lessons"	:[
+									{
+										"id"				:20,
+										
+										"title"				:"Stuff of Math",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									},
+									{
+										"id"				:21,
+										
+										"title"				:"Count on Numbers",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:1
+									}
+							]
+						},
+						{
+							"id"		:0,
+							"title"		:"Bead Frame",
+							"isRibbon"	:true,
+							"lessons"	:[
+									{
+										"id"				:0,
+										
+										"title"				:"Count a Bead",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									},
+									{
+										"id"				:1,
+										
+										"title"				:"Frame It for Murder",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:1
+									},
+									{
+										"id"				:221,
+										
+										"title"				:"Another Frame Lesson",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:1
+									}
+							]
+						},
+						{
+							"id"		:1,
+							"title"		:"Geometry",
+							"isRibbon"	:false,
+							"lessons"	: [
+									{
+										"id"				:2,
+										
+										"title"				:"Pythagorus is Cool!",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									}
+							]
+						}
+						]
+	},
+	{
+		"id"			:1,
+		"title"			:"English",
+		"series"	: 	[
+						{
+							"id"		:2,
+							"title"		:"Sentence Diagraming",
+							"isRibbon"	:true,
+							"lessons"	:[
+									{
+										"id"				:4,
+										
+										"title"				:"Choose a Noun",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									},
+									{
+										"id"				:5,
+										
+										"title"				:"Get the Verb",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:1
+									}
+							]
+						},
+						{
+							"id"		:3,
+							"title"		:"Literature Stuff",
+							"isRibbon"	:false,
+							"lessons"	: [
+									{
+										"id"				:6,
+										
+										"title"				:"Shake Your Spear.",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									},
+									{
+										"id"				:7,
+										
+										"title"				:"Alas, Poor Dude...",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									}
+							]
+						}
+						]
+	},
+	{
+		"id"			:2,
+		"title"			:"History",
+		"series"	: 	[
+						{
+							"id"		:4,
+							"title"		:"American History",
+							"isRibbon"	:false,
+							"lessons"	:[
+									{
+										"id"				:8,
+										
+										"title"				:"1776",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									},
+									{
+										"id"				:9,
+										
+										"title"				:"Constitutional",
+										"notes"				:"yadda yadda",
+										"sorting"			:1,
+										"ribbonSorting"		:0
+									}
+							]
+						},
+						{
+							"id"		:5,
+							"title"		:"Egyptian History",
+							"isRibbon"	:true,
+							"lessons"	: [
+									{
+										"id"				:10,
+										
+										"title"				:"I'm in Da Nile!",
+										"notes"				:"yadda yadda",
+										"sorting"			:0,
+										"ribbonSorting"		:0
+									},
+									{
+										"id"				:11,
+										
+										"title"				:"Peer Amid",
+										"notes"				:"yadda yadda",
+										"sorting"			:1,
+										"ribbonSorting"		:1
+									}
+							]
+						}
+						]
+	}
+
+]

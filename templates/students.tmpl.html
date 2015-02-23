@@ -1,0 +1,8 @@
+<h4>Students</h4>
+<div ng-controller="StudentController as studentCtrl">
+	<ul class="list-group">
+		<a class="list-group-item list-group-item-default" ng-class="{active : student.staged}" ng-repeat="student in studentCtrl.students | orderBy:'nameFirst'" ng-click="studentCtrl.stageStudent(student)">
+			{{student.nameFirst}} {{student.nameLast}}
+		</a>
+	</ul>
+</div>

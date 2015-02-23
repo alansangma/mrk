@@ -1,0 +1,7 @@
+<!-- STATE NAVIGATION -->
+<ul class="nav nav-tabs">
+	<li ng-class="{active : stateCtrl.isMode(mode)}" ng-repeat="mode in stateCtrl.modes">
+		<a href="" ng-click="stateCtrl.selectMode($index)">{{mode | uppercase}}</a>
+	</li>
+</ul>
+<!-- / STATE NAVIGATION -->

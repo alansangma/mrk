@@ -1,0 +1,162 @@
+.panel-heading {
+	border-radius: 0 0 3px 3px;
+}
+
+.panel {
+	border-top: none;
+	/*border-bottom: none;*/
+	border-radius: 0 0 3px 3px;
+}
+
+.panel-heading {
+	margin-top: 20px;
+}
+
+#students-tray,
+#catalog-tray {
+	/*height: 50%;*/
+	overflow: scroll;
+	border-bottom: solid 1px #444;
+	background: none;
+	box-shadow: 0 0 4px rgba(0,0,0, 0.5) inset;
+}
+
+
+
+.mrk-btn {
+	width:100%;
+}
+
+.navbar {
+	min-height: 1px;
+	border-radius: 0;
+}
+
+.username {
+	text-align: right;
+}
+
+.header > .brand-wrap {
+	padding-left: 0;
+}
+
+.header > .user-wrap {
+	padding-right: 0;
+}
+
+.panel-group {
+	margin-bottom: 0;
+}
+
+.list-group {
+	margin-bottom: 5px;
+}
+
+a.list-group-item {
+	/*font-size: 14px;*/
+}
+a.list-group-item.disabled {
+	background-color: #222;
+	color: #555;
+}
+a.list-group-item.disabled:before {
+    font-family: FontAwesome;
+    content: "\f14a";
+}
+
+a.list-group-item.disabled:hover {
+	background-color: #333;
+	color: #666;
+	cursor: pointer;
+}
+a.list-group-item:hover {
+	cursor: pointer;
+}
+
+a.list-group-item.active {
+	background-color: #62c462;
+	border-color: #666;
+	color: #111;
+}
+a.list-group-item.active:hover {
+	background-color: #6fdc6f;
+	color: #111;
+	/*border-color: #808080;*/
+}
+
+a.list-group-item.disabled.active:before {
+	/*background-color: #f89406;*/
+	/*background-color: #62c462;*/
+	/*background-color: #ee5f5b;
+	color: #fff;
+	border-color: #000;*/
+	content: "\f01e";
+}
+
+a.list-group-item.disabled .badge {
+	color: #666;
+	background-color: #000;
+	font-weight: normal;
+}
+
+#staged-students-well,
+#staged-lessons-well {
+	overflow: scroll;
+}
+
+.subject-select {
+	margin-bottom: 10px;
+}
+
+#lessons .panel {
+	margin:0;
+}
+
+#lessons .panel-heading {
+	margin-top: 0;
+}
+
+#lessons .panel-heading a {
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin:0;
+}
+
+#lessons .panel-heading a:hover {
+	text-decoration: none;
+}
+#lessons .panel-heading {
+	position: relative;
+}
+a.expand-all-catalog,
+a.collapse-all-catalog {
+	text-align: right;
+	display: block;
+	font-size: 12px;
+	padding: 10px 0 0;
+}
+
+a.expand-all-catalog:hover,
+a.collapse-all-catalog:hover {
+	text-decoration: none;
+}
+
+a.expand-all-catalog:before {
+	font-family: FontAwesome;
+	content: "\f0d7";
+	padding-right: 0.5em;
+}
+a.collapse-all-catalog:before {
+	font-family: FontAwesome;
+	content: "\f0d8";
+	padding-right: 0.5em;
+}
+
+.footer-panel {
+	text-align: center;
+}
+
+/* ANIMATIONS */
