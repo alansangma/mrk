@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="mrk">
+<html ng-app="mrk" ng-strict-di>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,32 +23,6 @@
 		<script type="text/javascript" src="scripts/services/record-service.js"></script>
 		<script type="text/javascript" src="scripts/services/catalog-service.js"></script>
 		<script type="text/javascript" src="scripts/services/students-service.js"></script>
-		<script type="text/javascript">
-		jQuery( document ).ready( function() {
-		jQuery('.responsive-calendar').responsiveCalendar();
-		jQuery(window).resize(function(event) {
-			jQuery('#students-tray').height(jQuery(window).height()*.6);
-			jQuery('#catalog-tray').height(jQuery(window).height()*.6 - 60);
-			jQuery('#staged-students-well').height(jQuery(window).height()*.25 - 50);
-			jQuery('#staged-lessons-well').height(jQuery(window).height()*.25 - 50);
-			
-		});
-		jQuery(window).trigger('resize');
-		
-		jQuery('.collapse-all-catalog').hide();
-		jQuery('.expand-all-catalog').click(function(event) {
-			jQuery('.series-panel-collapse:not(".in")').collapse('show');
-			jQuery('.expand-all-catalog').hide();
-			jQuery('.collapse-all-catalog').show();
-		});
-		jQuery('.collapse-all-catalog').click(function(event) {
-			jQuery('.series-panel-collapse.in').collapse('hide');
-			jQuery('.expand-all-catalog').show();
-			jQuery('.collapse-all-catalog').hide();
-		});
-		
-		});
-		</script>
 	</head>
 	<body ng-controller="ModeController as modeCtrl">
 		
@@ -179,42 +153,7 @@
 						<!-- CATALOG CONTROLLER -->
 						<div class="col-sm-3" id="lessons" ng-controller="CatalogController as catalogCtrl">
 							<h4>Lessons</h4>
-						<select class="form-control subject-select"
-						ng-options="subject as subject.title for subject in catalogCtrl.subjects"
-						ng-model="catalogCtrl.currSubject"></select>
-						<div id="catalog-tray">
-							<div class="panel-group" id="subject-accordion" role="tablist" aria-multiselectable="true">
-								<!-- /////////////////////////// -->
-								<!-- NG REPEAT subject > series -->
-								<div class="panel-group" id="series-accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default" id="series-panel" ng-repeat="series in catalogCtrl.currSubject.series">
-										<div class="panel-heading" id="series-heading{{series.id}}">
-											<!-- <a href="#series-{{series.id}}" data-toggle="collapse" data-parent="#series-accordion"> -->
-											<a href="#series-{{series.id}}" data-toggle="collapse" >
-												{{series.title}}
-											</a>
-										</div>
-										<div id="series-{{series.id}}" class="panel-collapse collapse series-panel-collapse">
-											<div class="panel-body">
-												<div class="list-group">
-													<a class="list-group-item"
-													ng-class="{active :lesson.staged, disabled :lesson.disabled}"
-													ng-repeat="lesson in series.lessons"
-													ng-click="catalogCtrl.stageLesson(lesson)">
-														{{lesson.title}}
-														<span class="badge" ng-show="lesson.currCount > 0">{{lesson.currCount}}</span>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- NG REPEAT subject > series -->
-								<!-- /////////////////////////// -->
-							</div>
-						</div>
-						<a href="" class="expand-all-catalog">EXPAND ALL</a>
-						<a href="" class="collapse-all-catalog">COLLAPSE ALL</a>
+							<catalog-list></catalog-list>
 					</div>
 					<!-- / CATALOG CONTROLLER -->
 				</div>
@@ -249,5 +188,32 @@
 			</div>
 		</div>
 	</div>
+
+		<script type="text/javascript">
+		jQuery( document ).ready( function() {
+		jQuery('.responsive-calendar').responsiveCalendar();
+		jQuery(window).resize(function(event) {
+			jQuery('#students-tray').height(jQuery(window).height()*.6);
+			//jQuery('#catalog-tray').height(jQuery(window).height()*.6 - 60);
+			jQuery('#staged-students-well').height(jQuery(window).height()*.25 - 50);
+			jQuery('#staged-lessons-well').height(jQuery(window).height()*.25 - 50);
+			
+		});
+		jQuery(window).trigger('resize');
+		
+		/*jQuery('.collapse-all-catalog').hide();
+		jQuery('.expand-all-catalog').click(function(event) {
+			jQuery('.series-panel-collapse:not(".in")').collapse('show');
+			jQuery('.expand-all-catalog').hide();
+			jQuery('.collapse-all-catalog').show();
+		});
+		jQuery('.collapse-all-catalog').click(function(event) {
+			jQuery('.series-panel-collapse.in').collapse('hide');
+			jQuery('.expand-all-catalog').show();
+			jQuery('.collapse-all-catalog').hide();
+		});*/
+		
+		});
+		</script>
 </body>
 </html>

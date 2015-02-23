@@ -1,0 +1,38 @@
+<select class="form-control subject-select"
+	ng-options="subject as subject.title for subject in catalogCtrl.subjects"
+	ng-model="catalogCtrl.currSubject"></select>
+<div id="catalog-tray" catalog-height>
+	<div class="panel-group" id="subject-accordion" role="tablist" aria-multiselectable="true">
+		<!-- /////////////////////////// -->
+		<!-- NG REPEAT subject > series -->
+		<div class="panel-group" id="series-accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default" id="series-panel" ng-repeat="series in catalogCtrl.currSubject.series">
+				<div class="panel-heading" id="series-heading{{series.id}}">
+					<!-- <a href="#series-{{series.id}}" data-toggle="collapse" data-parent="#series-accordion"> -->
+					<a href="#series-{{series.id}}" data-toggle="collapse" >
+						{{series.title}}
+					</a>
+				</div>
+				<div id="series-{{series.id}}" class="panel-collapse collapse series-panel-collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a class="list-group-item"
+								ng-class="{active :lesson.staged, disabled :lesson.disabled}"
+								ng-repeat="lesson in series.lessons"
+								ng-click="catalogCtrl.stageLesson(lesson)">
+								{{lesson.title}}
+								<span class="badge" ng-show="lesson.currCount > 0">{{lesson.currCount}}</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- NG REPEAT subject > series -->
+		<!-- /////////////////////////// -->
+	</div>
+</div>
+<div all-panel-toggle>
+	<a href="" class="expand-all-catalog">EXPAND ALL</a>
+	<a href="" class="collapse-all-catalog">COLLAPSE ALL</a>
+</div>

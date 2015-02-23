@@ -35,4 +35,48 @@
 			_this.stagedLessons = [];
 		});
 	}]);
+
+	app.directive('catalogList', function(){
+		return {
+			restrict		:'E',
+			templateUrl		:'./templates/catalog.tmpl.html'
+		}
+	});
+
+	app.directive('allPanelToggle', function(){
+		var collapseAll, expandAll;
+
+		collapseAll = function() {
+			$('.series-panel-collapse.in').collapse('hide');
+			$('.expand-all-catalog').show();
+			$('.collapse-all-catalog').hide();
+		};
+
+		expandAll = function() {
+			$('.series-panel-collapse:not(".in")').collapse('show');
+			$('.expand-all-catalog').hide();
+			$('.collapse-all-catalog').show();
+		}
+		return {
+			restrict		:'A',
+			link			:function(scope, element, attrs) {
+				$('.collapse-all-catalog').hide();
+				$('.collapse-all-catalog').on('click', collapseAll);
+				$('.expand-all-catalog').on('click', expandAll);
+			}
+		}
+	});
+
+	app.directive('catalogHeight', function(){
+		var handleResizeCatalog = function(element){
+			$(element).height($(window).height()*.6 - 60);
+		}
+		return {
+			restrict		:'A',
+			link			:function(scope, element, attrs) {
+				handleResizeCatalog(element);
+				$(window).on('resize', function(e){handleResizeCatalog(element)});
+			}
+		}
+	});
 })();
