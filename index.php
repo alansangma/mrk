@@ -79,7 +79,10 @@
 							<h4>Students</h4>
 							<div id="students-tray">
 								<ul class="list-group">
-									<a class="list-group-item list-group-item-default" ng-class="{active : student.staged, disabled :student.disabled}" ng-repeat="student in studentCtrl.students | orderBy:'nameFirst'" ng-click="studentCtrl.stageStudent(student)">
+									<a class="list-group-item list-group-item-default"
+									ng-class="{active : student.staged, disabled :student.disabled}"
+									ng-repeat="student in studentCtrl.students | orderBy:'nameFirst'"
+									ng-click="studentCtrl.stageStudent(student)">
 										{{student.nameFirst}} {{student.nameLast}}
 										<span class="badge" ng-show="student.currCount > 0">{{student.currCount}}</span>
 									</a>
@@ -160,8 +163,12 @@
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" ng-show="modeCtrl.isMode('record')" ng-click="recordCtrl.makeRecord('record');">RECORD</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" ng-show="modeCtrl.isMode('plan')" ng-click="recordCtrl.makeRecord('plan');">PLAN</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal"
+											ng-show="modeCtrl.isMode('record')"
+											ng-click="recordCtrl.makeRecord('record');">RECORD</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal"
+											ng-show="modeCtrl.isMode('plan')"
+											ng-click="recordCtrl.makeRecord('plan');">PLAN</button>
 										</div>
 									</div>
 								</div>
@@ -172,7 +179,9 @@
 						<!-- CATALOG CONTROLLER -->
 						<div class="col-sm-3" id="lessons" ng-controller="CatalogController as catalogCtrl">
 							<h4>Lessons</h4>
-						<select class="form-control subject-select" ng-options="subject as subject.title for subject in catalogCtrl.subjects" ng-model="catalogCtrl.currSubject"></select>
+						<select class="form-control subject-select"
+						ng-options="subject as subject.title for subject in catalogCtrl.subjects"
+						ng-model="catalogCtrl.currSubject"></select>
 						<div id="catalog-tray">
 							<div class="panel-group" id="subject-accordion" role="tablist" aria-multiselectable="true">
 								<!-- /////////////////////////// -->
@@ -188,7 +197,10 @@
 										<div id="series-{{series.id}}" class="panel-collapse collapse series-panel-collapse">
 											<div class="panel-body">
 												<div class="list-group">
-													<a class="list-group-item" ng-class="{active :lesson.staged, disabled :lesson.disabled}" ng-repeat="lesson in series.lessons" ng-click="catalogCtrl.stageLesson(lesson)">
+													<a class="list-group-item"
+													ng-class="{active :lesson.staged, disabled :lesson.disabled}"
+													ng-repeat="lesson in series.lessons"
+													ng-click="catalogCtrl.stageLesson(lesson)">
 														{{lesson.title}}
 														<span class="badge" ng-show="lesson.currCount > 0">{{lesson.currCount}}</span>
 													</a>
